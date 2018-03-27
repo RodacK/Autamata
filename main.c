@@ -9,7 +9,7 @@
 int main () {
 	char *datas[] = {"0","1"};
 	char *datas2[] = {"Q0","Q1"};
-	char *str[] = {"Q0","0","Q0","Q0","1","Q1,Q0","Q1","0","Q0","Q1","1","Q1"};
+	char *str[] = {"Q0","0","Q0","Q0","1","Q1","Q1","0","Q0","Q1","1","Q1"};
 	char *inicio = {"Q0"};
 	char *fin[] = {"Q0","Q1"};
 	char *prueba[] = {"1","1","0","0","1"};
