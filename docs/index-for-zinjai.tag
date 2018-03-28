@@ -14,22 +14,15 @@
       <type>void</type>
       <name>add_data_matrix</name>
       <anchorfile>gestor__automata_8c.html</anchorfile>
-      <anchor>aa7113c5b6be86214a89a8a38d8115aa5</anchor>
-      <arglist>(char *data[], int fila_o_columna)</arglist>
+      <anchor>ae4c465a84ca6eea12e030e44e6b3fba2</anchor>
+      <arglist>(char *data[], int fila_o_columna, int cant)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>generar_funcion_transitoria</name>
       <anchorfile>gestor__automata_8c.html</anchorfile>
-      <anchor>ae9dfb0859dcd50c42165ca3d4811728b</anchor>
-      <arglist>(char **data, int cont)</arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>get_size</name>
-      <anchorfile>gestor__automata_8c.html</anchorfile>
-      <anchor>ab2ce88845bdeb5f39c6355c1bafef74b</anchor>
-      <arglist>(char *data[])</arglist>
+      <anchor>a116d2bfa936e5bad775baf73349abcb4</anchor>
+      <arglist>(char *data[], int cont, int cant)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
@@ -42,15 +35,14 @@
       <type>void</type>
       <name>verify_automata</name>
       <anchorfile>gestor__automata_8c.html</anchorfile>
-      <anchor>a2e7a4beccfe4359dd2e38e904c9e2d10</anchor>
-      <arglist>(char *data[], char *inicio, char *fin[], int cont)</arglist>
+      <anchor>a0043699ed5739e7ab3d48bd2058fedc0</anchor>
+      <arglist>(char *data[], char *inicio, char *fin[], int cont, int cant)</arglist>
     </member>
   </compound>
   <compound kind="file">
     <name>gestor_automata.h</name>
     <path>K:/c/Projects/Automata/</path>
     <filename>gestor__automata_8h</filename>
-    <class kind="struct">s_automata</class>
     <member kind="define">
       <type>#define</type>
       <name>NUM_CHARS</name>
@@ -72,26 +64,19 @@
       <anchor>aa93f0eb578d23995850d61f7d61c55c1</anchor>
       <arglist></arglist>
     </member>
-    <member kind="typedef">
-      <type>struct s_automata</type>
-      <name>automata</name>
-      <anchorfile>gestor__automata_8h.html</anchorfile>
-      <anchor>a9645fdbd4a05f8416a9cc2d9f825b03c</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function">
       <type>void</type>
       <name>add_data_matrix</name>
       <anchorfile>gestor__automata_8h.html</anchorfile>
-      <anchor>aa7113c5b6be86214a89a8a38d8115aa5</anchor>
-      <arglist>(char *data[], int fila_o_columna)</arglist>
+      <anchor>ae4c465a84ca6eea12e030e44e6b3fba2</anchor>
+      <arglist>(char *data[], int fila_o_columna, int cant)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>generar_funcion_transitoria</name>
       <anchorfile>gestor__automata_8h.html</anchorfile>
-      <anchor>ae9dfb0859dcd50c42165ca3d4811728b</anchor>
-      <arglist>(char **data, int cont)</arglist>
+      <anchor>a116d2bfa936e5bad775baf73349abcb4</anchor>
+      <arglist>(char *data[], int cont, int cant)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
@@ -104,8 +89,8 @@
       <type>void</type>
       <name>verify_automata</name>
       <anchorfile>gestor__automata_8h.html</anchorfile>
-      <anchor>a2e7a4beccfe4359dd2e38e904c9e2d10</anchor>
-      <arglist>(char *data[], char *inicio, char *fin[], int cont)</arglist>
+      <anchor>a0043699ed5739e7ab3d48bd2058fedc0</anchor>
+      <arglist>(char *data[], char *inicio, char *fin[], int cont, int cant)</arglist>
     </member>
     <member kind="variable">
       <type>char *</type>
@@ -126,45 +111,6 @@
       <anchorfile>main_8c.html</anchorfile>
       <anchor>ae66f6b31b5ad750f1fe042a706a4e3d4</anchor>
       <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="struct">
-    <name>s_automata</name>
-    <filename>structs__automata.html</filename>
-    <member kind="variable">
-      <type>char *</type>
-      <name>alfabeto</name>
-      <anchorfile>structs__automata.html</anchorfile>
-      <anchor>a4a07cdc9b8090e16085236e0bb6a7de2</anchor>
-      <arglist>[NUM_CHARS]</arglist>
-    </member>
-    <member kind="variable">
-      <type>char *</type>
-      <name>estados</name>
-      <anchorfile>structs__automata.html</anchorfile>
-      <anchor>a5afbb107d2d060aedeaae528ab434018</anchor>
-      <arglist>[NUM_CHARS]</arglist>
-    </member>
-    <member kind="variable">
-      <type>char *</type>
-      <name>transiciones</name>
-      <anchorfile>structs__automata.html</anchorfile>
-      <anchor>a8c2a420d3b99e90cc458930cbcb3ce5a</anchor>
-      <arglist>[NUM_CHARS][NUM_CHARS]</arglist>
-    </member>
-    <member kind="variable">
-      <type>char</type>
-      <name>estado_inicial</name>
-      <anchorfile>structs__automata.html</anchorfile>
-      <anchor>a131f154053de19a96efb6a5c605b2881</anchor>
-      <arglist>[NUM_CHARS]</arglist>
-    </member>
-    <member kind="variable">
-      <type>char</type>
-      <name>estados_finales</name>
-      <anchorfile>structs__automata.html</anchorfile>
-      <anchor>a4045608f0f16c98c3458f72e214db18d</anchor>
-      <arglist>[NUM_CHARS]</arglist>
     </member>
   </compound>
 </tagfile>

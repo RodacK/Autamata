@@ -1,8 +1,8 @@
 #include "gestor_automata.h"
 
-void add_data_matrix(char *data[],int fila_o_columna){ //0 fila y 1 columna
+void add_data_matrix(char *data[],int fila_o_columna,int cant){ //0 fila y 1 columna
 	int cont = 0;
-	while(cont != NUM_CHARS){
+	while(cont != cant){
 		if(fila_o_columna==0){
 			matrix[cont+1][0] = data[cont];
 		}else{
@@ -27,16 +27,17 @@ int get_posicion(char* data,int fila_o_columna){
 	int i;
 	for (i=1;i<NUM_CHARS;i++){
 		if(fila_o_columna==0){
-			if(matrix[i][0] == data){
+			if(strcmp(matrix[i][0], data) == 0){
 				break;
 			}}else{
-			if(matrix[0][i] == data){
+			if(strcmp(matrix[0][i], data) == 0){
 				break;
 			}
 		}
 	}
 	return i;
 }
+
 
 void verify_automata(char *data[],char* inicio, char* fin[], int cont, int cant){
 	if(cont == cant){
@@ -49,8 +50,25 @@ void verify_automata(char *data[],char* inicio, char* fin[], int cont, int cant)
 	}else{
 		int x = get_posicion(inicio,0);
 		int y = get_posicion(data[cont],1);
-		printf("\n ------ inicio %s   fin %s  nuevo inicio %s",inicio,fin[0], matrix[x][y]);
-		verify_automata(data,matrix[x][y],fin,cont+1,cant);
-		return;
+		
+		if( strchr(matrix[x][y], ',')==NULL){
+			printf("\n ------ inicio %s   fin %s  nuevo inicio %s",inicio,fin[1], matrix[x][y]);
+			verify_automata(data,matrix[x][y],fin,cont+1,cant);
+			return;
+		}else{
+			char lol[sizeof(matrix[x][y])+2];
+			strcpy(lol,matrix[x][y]);
+			for (char* p = strtok(lol,","); p != NULL; p = strtok(NULL, ",")){
+				int a = get_posicion(p,0);
+				int b = get_posicion(data[cont+1],1);
+				if(matrix[a][b]!= NULL){
+					printf("\n ------ inicio %s   fin %s  nuevo inicio %s",inicio,fin[1], p);
+					verify_automata(data,p,fin,cont+1,cant);
+					return;
+				}	
+			}
+			
+		}
 	}
+	
 }

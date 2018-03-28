@@ -71,20 +71,18 @@ $(function() {
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Funciones</h2></td></tr>
-<tr class="memitem:aa7113c5b6be86214a89a8a38d8115aa5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gestor__automata_8c.html#aa7113c5b6be86214a89a8a38d8115aa5">add_data_matrix</a> (char *data[], int fila_o_columna)</td></tr>
-<tr class="separator:aa7113c5b6be86214a89a8a38d8115aa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9dfb0859dcd50c42165ca3d4811728b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gestor__automata_8c.html#ae9dfb0859dcd50c42165ca3d4811728b">generar_funcion_transitoria</a> (char **data, int cont)</td></tr>
-<tr class="separator:ae9dfb0859dcd50c42165ca3d4811728b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2ce88845bdeb5f39c6355c1bafef74b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gestor__automata_8c.html#ab2ce88845bdeb5f39c6355c1bafef74b">get_size</a> (char *data[])</td></tr>
-<tr class="separator:ab2ce88845bdeb5f39c6355c1bafef74b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4c465a84ca6eea12e030e44e6b3fba2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gestor__automata_8c.html#ae4c465a84ca6eea12e030e44e6b3fba2">add_data_matrix</a> (char *data[], int fila_o_columna, int cant)</td></tr>
+<tr class="separator:ae4c465a84ca6eea12e030e44e6b3fba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a116d2bfa936e5bad775baf73349abcb4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gestor__automata_8c.html#a116d2bfa936e5bad775baf73349abcb4">generar_funcion_transitoria</a> (char *data[], int cont, int cant)</td></tr>
+<tr class="separator:a116d2bfa936e5bad775baf73349abcb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae64ffea1a004468520dd79584b08eed9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gestor__automata_8c.html#ae64ffea1a004468520dd79584b08eed9">get_posicion</a> (char *data, int fila_o_columna)</td></tr>
 <tr class="separator:ae64ffea1a004468520dd79584b08eed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e7a4beccfe4359dd2e38e904c9e2d10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gestor__automata_8c.html#a2e7a4beccfe4359dd2e38e904c9e2d10">verify_automata</a> (char *data[], char *inicio, char *fin[], int cont)</td></tr>
-<tr class="separator:a2e7a4beccfe4359dd2e38e904c9e2d10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0043699ed5739e7ab3d48bd2058fedc0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gestor__automata_8c.html#a0043699ed5739e7ab3d48bd2058fedc0">verify_automata</a> (char *data[], char *inicio, char *fin[], int cont, int cant)</td></tr>
+<tr class="separator:a0043699ed5739e7ab3d48bd2058fedc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentación de las funciones</h2>
-<a id="aa7113c5b6be86214a89a8a38d8115aa5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7113c5b6be86214a89a8a38d8115aa5">&#9670;&nbsp;</a></span>add_data_matrix()</h2>
+<a id="ae4c465a84ca6eea12e030e44e6b3fba2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4c465a84ca6eea12e030e44e6b3fba2">&#9670;&nbsp;</a></span>add_data_matrix()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -99,7 +97,13 @@ Funciones</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>fila_o_columna</em>&#160;</td>
+          <td class="paramname"><em>fila_o_columna</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cant</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -111,8 +115,8 @@ Funciones</h2></td></tr>
 
 </div>
 </div>
-<a id="ae9dfb0859dcd50c42165ca3d4811728b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9dfb0859dcd50c42165ca3d4811728b">&#9670;&nbsp;</a></span>generar_funcion_transitoria()</h2>
+<a id="a116d2bfa936e5bad775baf73349abcb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a116d2bfa936e5bad775baf73349abcb4">&#9670;&nbsp;</a></span>generar_funcion_transitoria()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -120,14 +124,20 @@ Funciones</h2></td></tr>
         <tr>
           <td class="memname">void generar_funcion_transitoria </td>
           <td>(</td>
-          <td class="paramtype">char **&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>data</em>[], </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>cont</em>&#160;</td>
+          <td class="paramname"><em>cont</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cant</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -167,26 +177,8 @@ Funciones</h2></td></tr>
 
 </div>
 </div>
-<a id="ab2ce88845bdeb5f39c6355c1bafef74b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2ce88845bdeb5f39c6355c1bafef74b">&#9670;&nbsp;</a></span>get_size()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int get_size </td>
-          <td>(</td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>data</em>[]</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a2e7a4beccfe4359dd2e38e904c9e2d10"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e7a4beccfe4359dd2e38e904c9e2d10">&#9670;&nbsp;</a></span>verify_automata()</h2>
+<a id="a0043699ed5739e7ab3d48bd2058fedc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0043699ed5739e7ab3d48bd2058fedc0">&#9670;&nbsp;</a></span>verify_automata()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -213,7 +205,13 @@ Funciones</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>cont</em>&#160;</td>
+          <td class="paramname"><em>cont</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cant</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

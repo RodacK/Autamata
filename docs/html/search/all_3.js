@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['false',['FALSE',['../gestor__automata_8h.html#aa93f0eb578d23995850d61f7d61c55c1',1,'gestor_automata.h']]]
+  ['generar_5ffuncion_5ftransitoria',['generar_funcion_transitoria',['../gestor__automata_8h.html#a116d2bfa936e5bad775baf73349abcb4',1,'generar_funcion_transitoria(char *data[], int cont, int cant):&#160;gestor_automata.c'],['../gestor__automata_8c.html#a116d2bfa936e5bad775baf73349abcb4',1,'generar_funcion_transitoria(char *data[], int cont, int cant):&#160;gestor_automata.c']]],
+  ['gestor_5fautomata_2ec',['gestor_automata.c',['../gestor__automata_8c.html',1,'']]],
+  ['gestor_5fautomata_2eh',['gestor_automata.h',['../gestor__automata_8h.html',1,'']]],
+  ['get_5fposicion',['get_posicion',['../gestor__automata_8h.html#ae64ffea1a004468520dd79584b08eed9',1,'get_posicion(char *data, int fila_o_columna):&#160;gestor_automata.c'],['../gestor__automata_8c.html#ae64ffea1a004468520dd79584b08eed9',1,'get_posicion(char *data, int fila_o_columna):&#160;gestor_automata.c']]]
 ];

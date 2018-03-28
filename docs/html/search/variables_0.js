@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['alfabeto',['alfabeto',['../structs__automata.html#a4a07cdc9b8090e16085236e0bb6a7de2',1,'s_automata']]]
+  ['matrix',['matrix',['../gestor__automata_8h.html#aeb7b19e098417b853f22b78229ac4332',1,'gestor_automata.h']]]
 ];
