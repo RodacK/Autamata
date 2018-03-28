@@ -8,7 +8,7 @@ int main () {
 	char *str[] = {"Q0","a","Q1,Q2","Q1","b","Q4","Q2","a","Q3","Q3","c","Q6","Q4","c","Q5","Q4","d","Q7","Q6","d","Q7"};
 	char *inicio = {"Q0"};
 	char *fin[] = {"Q5","Q7"};
-	char *prueba[] = {"a","b","b"};
+	char *prueba[] = {"a","b","c"};
 	
 	add_data_matrix(datas,1,sizeof(datas)/4);
 	add_data_matrix(datas2,0,sizeof(datas2)/4);
