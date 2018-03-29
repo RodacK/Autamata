@@ -38,37 +38,46 @@ int get_posicion(char* data,int fila_o_columna){
 	return i;
 }
 
+char* choose_way(char *data[], char *prueba[],int cont){
+	char lol[sizeof(*data)+2];
+	strcpy(lol,*data);
+	if( strchr(lol, ',')==NULL){
+		return *data;
+	}else{
+		for (char* p = strtok(lol,","); p != NULL; p = strtok(NULL, ",")){
+			int a = get_posicion(p,0);
+			int b = get_posicion(prueba[cont+1],1);
+			if(matrix[a][b]!= NULL){
+				return p;
+			}	
+		}
+	}
+	return 0;
+}
 
 void verify_automata(char *data[],char* inicio, char* fin[], int cont, int cant){
 	if(cont == cant){
-		if(inicio==fin[0]||inicio==fin[1]){
-			printf("\n ---- TRUE");
-		}else{
-			printf("\n ---- false");
+		int i = 0;
+		while(fin[i] != '\0'){
+			if(strcmp(fin[i], inicio) == 0){
+				printf("\n ------ TRUE");
+				return;
+			}
+			i++;
 		}
-		return; 
+		printf("\n ------ FALSE");
+		return;
 	}else{
 		int x = get_posicion(inicio,0);
 		int y = get_posicion(data[cont],1);
-		
-		if( strchr(matrix[x][y], ',')==NULL){
-			printf("\n ------ inicio %s   fin %s  nuevo inicio %s",inicio,fin[1], matrix[x][y]);
-			verify_automata(data,matrix[x][y],fin,cont+1,cant);
+		if(matrix[x][y]== NULL){
+			printf("\n ------ FALSE");
 			return;
-		}else{
-			char lol[sizeof(matrix[x][y])+2];
-			strcpy(lol,matrix[x][y]);
-			for (char* p = strtok(lol,","); p != NULL; p = strtok(NULL, ",")){
-				int a = get_posicion(p,0);
-				int b = get_posicion(data[cont+1],1);
-				if(matrix[a][b]!= NULL){
-					printf("\n ------ inicio %s   fin %s  nuevo inicio %s",inicio,fin[1], p);
-					verify_automata(data,p,fin,cont+1,cant);
-					return;
-				}	
-			}
-			
 		}
+		char aux[4] = "";
+		strcpy(aux,choose_way(&matrix[x][y],data,cont));
+		printf("\n ------ inicio %s   fin %s",inicio,aux);
+		verify_automata(data,aux,fin,cont+1,cant);
+		return;
 	}
-	
 }
