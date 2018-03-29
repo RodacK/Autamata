@@ -8,6 +8,6 @@ char *matrix[NUM_CHARS][NUM_CHARS];
 void add_data_matrix(char* data[],int fila_o_columna, int cant);
 void generar_funcion_transitoria(char* data[], int cont,int cant);
 int get_posicion(char* data, int fila_o_columna);
-void verify_automata(char *data[],char* inicio, char* fin[], int cont, int cant);
+void verify_automata(char *data[],char* inicio, char* fin[], int cont, int cant[]);
 char* choose_way(char *data[],char *prueba[], int cont);
 #endif

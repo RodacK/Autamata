@@ -55,10 +55,10 @@ char* choose_way(char *data[], char *prueba[],int cont){
 	return 0;
 }
 
-void verify_automata(char *data[],char* inicio, char* fin[], int cont, int cant){
-	if(cont == cant){
+void verify_automata(char *data[],char* inicio, char* fin[], int cont, int cant[]){
+	if(cont == cant[0]){
 		int i = 0;
-		while(fin[i] != '\0'){
+		while(i!=cant[1]){
 			if(strcmp(fin[i], inicio) == 0){
 				printf("\n ------ TRUE");
 				return;
