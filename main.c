@@ -2,7 +2,9 @@
 //hacer para afn
 //mirar lambda @ 
 #include "gestor_automata.h"
-<<<<<<< HEAD
+#include "archivo.h"
+#include "controlador.h"
+/**<<<<<<< HEAD
 int main () {
 	char *datas[] = {"a","b","c","d"};
 	char *datas2[] = {"Q0","Q1","Q2","Q3","Q4","Q5","Q6","Q7"};
@@ -10,13 +12,38 @@ int main () {
 	char *inicio = {"Q0"};
 	char *fin[] = {"Q5","Q7"};
 	char *prueba[] = {"a","b","c"};
-=======
-#include "archivo.h"
-int main (char** file) {
+=======**/
+int main () {
 	
-	FileManager("1.txt");
-	printf("%s", readLine());
+	usarArchivo("1.txt");
+	leerLineas();
+	/*struct automata a = getAutomata();	
 	
+	
+	printf("%s Alfabeto: ", a.alfabeto);
+	fflush(stdin);
+	printf("%s\n entradas: ", a.entradas);
+	fflush(stdin);
+	printf("%s\n caminos: ", a.caminos);
+	fflush(stdin);
+	printf("%s\n inicial: ", a.inicial);
+	fflush(stdin);
+	printf("%s\n fin: ", a.fin);
+	fflush(stdin);
+	printf("%s\n prueba: ", a.prueba);
+	fflush(stdin);
+
+	/*char *datas[] = a.alfabeto;
+	//Estados
+	char *datas2[] =  a.entradas;
+	//Caminos
+	char *str[] = a.caminos;
+	//Nodo inicial
+	char *inicio = a.inicial;
+	//Nodo final
+	char *fin[] = a.fin;
+	//Prueba
+	char *prueba[] = a.fin;	*/
 	//Alfabeto
 	char *datas[] = {"0","1"};
 	//Estados
@@ -28,8 +55,8 @@ int main (char** file) {
 	//Nodo final
 	char *fin[] = {"Q0","Q1"};
 	//Prueba
-	char *prueba[] = {"1","1","0","0","1"};
->>>>>>> files
+	char *prueba[] = {"1","1","0","0","1"};	
+/*>>>>>>> files*/
 	
 	add_data_matrix(datas,1,sizeof(datas)/4);
 	add_data_matrix(datas2,0,sizeof(datas2)/4);

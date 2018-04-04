@@ -45,9 +45,9 @@ char * readLine() {
 		return NULL;
 	}
 	/*
-	*Llama metodo de uyil.h
+	*Llama metodo de util.h
 	*/
-	line = removeOfString(line, getString("\n"));
+	//line = removeOfString(line, getString("\n"));
 	return line;
 }
 

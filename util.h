@@ -1,6 +1,6 @@
 #ifndef UTIL_H
 #define UTIL_H
-
+#include <stdbool.h>
 
 static const char SYMBOL_LAMBDA = '@';
 
@@ -15,5 +15,6 @@ int getPositionInArray(char ** array, int length, char * string);
 bool containtArray(char ** array, int length, char * string);
 char * getStringOfChar(char character);
 char * concat(char * to, char * from);
+char** split1(char * string, const char * delimitation);
 
 #endif

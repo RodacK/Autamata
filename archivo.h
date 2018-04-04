@@ -10,6 +10,7 @@ extern char * lastMode;
 
 void FileManager(char * path);
 char * readLine();
+
 void writeLine(char * line, char * mode);
 ssize_t getSizeReadLastLine();
 char * getLastMode();
