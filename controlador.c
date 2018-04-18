@@ -13,14 +13,12 @@ void usarArchivo(char* path){
 
 char** leerLineas(){
 	char* line = NULL;
-	int i = 0;
-	do{
-		line = readLine();
-		automata[i] = line;
-		printf("%s\n", automata[i]);
-		i++;
+	char* automata;
+	while((line = readLine()) != NULL){
+		automata = line;
+		printf("%s\n", automata);
 		fflush(stdin);
-	}while(line != NULL);
+	}
 	return automata;
 }
 

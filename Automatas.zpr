@@ -19,7 +19,7 @@ current_source=controlador.c
 path_char=\
 [source]
 path=controlador.c
-cursor=30:44
+cursor=21:16
 open=true
 [source]
 path=gestor_automata.c
